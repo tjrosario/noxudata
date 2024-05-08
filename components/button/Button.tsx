@@ -22,7 +22,7 @@ export default function Button({
     <button
       className={`bg-white hover:bg-gray-100 border border-gray-300 border-solid rounded-md px-3 py-2  font-medium ${className} ${
         level === 'info' ? info : ''
-      } ${level === 'danger' ? danger : ''} text-${size}`}
+      } ${level === 'danger' ? danger : ''} ${size === 'md2' ? 'text-md2' : 'text-xs'}`}
       {...props}
     >
       {children}

@@ -75,9 +75,7 @@ export default function Home() {
                 selectIcon={<BsChat size={20} />}
               />
             </div>
-            <Button className="height-full" level="danger">
-              End Chat
-            </Button>
+            <Button level="danger">End Chat</Button>
           </div>
         </div>
       </footer>
