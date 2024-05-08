@@ -1,15 +1,17 @@
-function sortBy(key, cb) {
+function sortBy(key: string, cb: any) {
   if (!cb) cb = () => 0;
-  return (a, b) => (a[key] > b[key] ? 1 : b[key] > a[key] ? -1 : cb(a, b));
+  return (a: any, b: any) =>
+    a[key] > b[key] ? 1 : b[key] > a[key] ? -1 : cb(a, b);
 }
 
-function sortByDesc(key, cb) {
+function sortByDesc(key: string, cb: any) {
   if (!cb) cb = () => 0;
-  return (b, a) => (a[key] > b[key] ? 1 : b[key] > a[key] ? -1 : cb(b, a));
+  return (b: any, a: any) =>
+    a[key] > b[key] ? 1 : b[key] > a[key] ? -1 : cb(b, a);
 }
 
-export function orderBy(keys, orders) {
-  let cb = () => 0;
+export function orderBy(keys: any, orders: string[]) {
+  let cb: any = () => 0;
   keys.reverse();
   orders.reverse();
   for (const [i, key] of keys.entries()) {

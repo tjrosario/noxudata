@@ -33,8 +33,8 @@ export default function Table({ columns, maxRows = 5, rows }: TableProps) {
       sort.direction === 'asc' && direction === 'asc'
         ? 'desc'
         : sort.direction === 'desc' && direction === 'desc'
-        ? 'asc'
-        : direction;
+          ? 'asc'
+          : direction;
 
     const sorted = dataIn.concat().sort(orderBy([prop], [dir]));
     setData(sorted);
