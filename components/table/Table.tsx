@@ -64,7 +64,7 @@ export default function Table({ columns, maxRows = 5, rows }: TableProps) {
                 className="align-top text-gray-500 font-medium py-2 px-3 relative"
                 key={column.label}
               >
-                <div className="flex">
+                <div className="flex whitespace-nowrap">
                   <div>{column.label}</div>
 
                   {column.sortable && (
